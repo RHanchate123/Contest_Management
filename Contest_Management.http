@@ -1,0 +1,6 @@
+@Contest_Management_HostAddress = http://localhost:5094
+
+GET {{Contest_Management_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
