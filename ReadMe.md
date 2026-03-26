@@ -3,7 +3,6 @@
 A minimal API-based backend system built using **ASP.NET Core (.NET 9)** for managing contests, users, leaderboards, and authentication using **ASP.NET Identity**.
 
 ---
-
 ------Features---------
 
 * User Registration & Login (ASP.NET Identity)
@@ -28,6 +27,27 @@ A minimal API-based backend system built using **ASP.NET Core (.NET 9)** for man
 * **API Docs**: Swagger (Swashbuckle)
 
 ---
+
+--------------Swagger/Postman JSON samples ---------------------
+Register User
+{
+  "name": "Test",
+  "userName": "TestAbc",
+  "email": "abc@tes.com",
+  "password": "123@Abc", Alphanumeric with special character and a upper case letter.
+  "role": 0
+}
+
+Login
+{
+  "email": "abc@tes.com", 
+  "password": "123@Abc"
+}
+
+Get contests
+no json body requeired. A simple get call
+----
+
 
 --------Project Structure-----------
 
@@ -142,22 +162,7 @@ Update `appsettings.json`: If DB name needs to be different
 ```
 
 ---
-
-### 3. Run Migrations
-
-```
-dotnet ef migrations add InitialCreate
-dotnet ef database update
-```
-
----
-
-### 4. Run the Application
-
-```
-dotnet run
-```
-
+The app will automatically create Database and run migrations, along with contest data.
 ---
 
 ### 5. Swagger UI
@@ -189,9 +194,6 @@ https://localhost:<port>/swagger
 
 ---
 
-
----
-
 ##  Best Practices Followed
 
 * Dependency Injection
@@ -215,7 +217,7 @@ https://localhost:<port>/swagger
 
 ## Author
 
-Rahul Hanchate
+Rahul Nitin Hanchate
 
 ---
 
